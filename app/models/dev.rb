@@ -7,6 +7,6 @@ class Dev < ActiveRecord::Base
     end
 
     def give_away(dev, freebie)
-        freebie.update(dev_id: dev.id)
+        freebie.update(dev_id: dev.id)  if freebie.dev_id == self.id   
     end
 end
